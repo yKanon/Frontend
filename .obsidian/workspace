@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "net/http-header.md",
-            "mode": "source"
+            "file": "browser/CORS.md",
+            "mode": "preview"
           }
         },
         "group": "5e02cd4e20554ed4"
@@ -21,8 +21,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "net/http-header.md",
-            "mode": "preview"
+            "file": "browser/CORS.md",
+            "mode": "source"
           }
         },
         "group": "5e02cd4e20554ed4"
@@ -65,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 236
   },
   "right": {
     "id": "2a2fcde7cfaa4e52",
@@ -82,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "net/http-header.md",
+                "file": "browser/CORS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,8 +99,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "699a4fae08aa3f72",
+  "active": "f917e7b340f574f5",
   "lastOpenFiles": [
+    "browser/CORS.md",
+    "browser/未命名.md",
+    "browser/JSONP.md",
+    "未命名.md",
+    "net/Stored XSS.md",
+    "net/DOM-based or local XSS.md",
+    "net/Reflected XSS.md",
+    "net/未命名.md",
+    "net/反射型 XSS.md",
     "net/http-header.md"
   ]
 }
