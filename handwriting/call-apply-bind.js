@@ -1,30 +1,52 @@
-function call(fn, ctx, ...args) {
-  ctx ?? (ctx = globalThis);
-  // fn.bind(ctx)(...args);
-  ctx.temp = fn;
-  const result = ctx.temp(...args);
+// 1.
+// function call(fn, ctx, ...args) {
+//   ctx ?? (ctx = globalThis);
+//   // fn.bind(ctx)(...args);
+//   ctx.temp = fn;
+//   const result = ctx.temp(...args);
+//   delete ctx.temp;
+//   return result;
+// }
+// 2.
+Function.prototype.myCall = function (ctx = globalThis, ...args) {
+  ctx.temp = this;
+  const res = ctx.temp(...args);
   delete ctx.temp;
-  return result;
-}
+  return res;
+};
 
-function apply(fn, ctx, args) {
-  ctx ?? (ctx = globalThis);
+// 1.
+// function apply(fn, ctx, args) {
+//   ctx ?? (ctx = globalThis);
 
-  ctx.temp = fn;
-  const result = ctx.temp(...args);
+//   ctx.temp = fn;
+//   const result = ctx.temp(...args);
+//   delete ctx.temp;
+//   return result;
+// }
+// 2.
+Function.prototype.myApply = function (ctx = globalThis, args) {
+  ctx.temp = this;
+  const res = ctx.temp(...args);
   delete ctx.temp;
-  return result;
-}
+  return res;
+};
 
-function bind(fn, ctx, ...args) {
-  ctx.temp = fn;
+// 1.
+// function bind(fn, ctx, ...args) {
+//   ctx.temp = fn;
 
+//   return (...arr) => ctx.temp(...args, ...arr);
+// }
+// 2.
+Function.prototype.myBind = function (ctx, ...args) {
+  ctx.temp = this;
   return (...arr) => ctx.temp(...args, ...arr);
-}
+};
 
 // test
 function add(x, y) {
-  console.log("this :>> ", this);
+  console.log('this :>> ', this);
   return x + y + this.a;
 }
 

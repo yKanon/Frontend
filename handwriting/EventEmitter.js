@@ -1,6 +1,5 @@
 class EventEmitter {
   constructor() {
-    this.getInstance();
     this.handlers = {};
   }
 
