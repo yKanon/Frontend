@@ -228,13 +228,13 @@ console.log(count);
 
 因此，在使用 Webpack 时开发者需要有意识地规避这些无意义的重复赋值操作。
 
-## 3.3 使用 `#pure` 标注纯函数调用
+## 3.3 使用 `[[pure]]` 标注纯函数调用
 
-与赋值语句类似，JavaScript 中的函数调用语句也可能产生副作用，因此默认情况下 Webpack 并不会对函数调用做 Tree Shaking 操作。不过，开发者可以在调用语句前添加 `/*#__PURE__*/` 备注，明确告诉 Webpack 该次函数调用并不会对上下文环境产生副作用，例如：
+与赋值语句类似，JavaScript 中的函数调用语句也可能产生副作用，因此默认情况下 Webpack 并不会对函数调用做 Tree Shaking 操作。不过，开发者可以在调用语句前添加 `/*[[__PURE__]]*/` 备注，明确告诉 Webpack 该次函数调用并不会对上下文环境产生副作用，例如：
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/584c9cbba2eb4f6c8e222686f3c13d7e~tplv-k3u1fbpfcp-watermark.awebp)
 
-示例中，`foo('be retained')` 调用没有带上 `/*#__PURE__*/` 备注，代码被保留；作为对比，`foo('be removed')` 带上 Pure 声明后则被 Tree Shaking 删除。
+示例中，`foo('be retained')` 调用没有带上 `/*[[__PURE__]]*/` 备注，代码被保留；作为对比，`foo('be removed')` 带上 Pure 声明后则被 Tree Shaking 删除。
 
 ## 3.3 禁止 Babel 转译模块导入导出语句
 

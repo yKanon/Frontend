@@ -4,28 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "f917e7b340f574f5",
+        "id": "d2d0ca8fbbc0f441",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "browser/CORS.md",
-            "mode": "preview"
-          }
-        },
-        "group": "5e02cd4e20554ed4"
-      },
-      {
-        "id": "699a4fae08aa3f72",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "browser/CORS.md",
-            "mode": "source"
-          }
-        },
-        "group": "5e02cd4e20554ed4"
+          "type": "graph",
+          "state": {}
+        }
       }
     ],
     "direction": "vertical"
@@ -60,6 +44,14 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "b4a9f44617ae1281",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
           }
         ]
       }
@@ -81,13 +73,31 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "browser/CORS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "69d7e98533218c3c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "86a93ad169ca5f4d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
@@ -99,7 +109,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f917e7b340f574f5",
+  "active": "d2d0ca8fbbc0f441",
   "lastOpenFiles": [
     "browser/CORS.md",
     "browser/未命名.md",

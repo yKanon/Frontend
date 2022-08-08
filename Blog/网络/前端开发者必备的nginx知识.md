@@ -132,7 +132,7 @@ server {
 ```
 error_page 500 501 502 503 504 506 /50x.html;
     location = /50x.html {
-        #将跟路径改编为存放html的路径。
+        [[将跟路径改编为存放html]]的路径。
         root /root/static/html;
     }
 ```

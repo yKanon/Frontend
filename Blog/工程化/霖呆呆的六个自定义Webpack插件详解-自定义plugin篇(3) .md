@@ -335,7 +335,7 @@ module.exports = No1WebpackPlugin;
 
 它告诉我们`Tabable.plugin`这种的调用形式已经被废弃了，请使用新的`API`，也就是`.hooks`来替代`.plugin`这种形式。
 
-如果你和呆呆一样，开始看的官方文档是 [《编写一个插件》](https://link.juejin.cn/?target=https%3A%2F%2Fwww.webpackjs.com%2Fcontribute%2Fwriting-a-plugin%2F 'https://www.webpackjs.com/contribute/writing-a-plugin/')这里的话，那么现在请让我们换个方向了戳这里了： [《Plugin API》](https://link.juejin.cn/?target=https%3A%2F%2Fwww.webpackjs.com%2Fapi%2Fplugins%2F%23tapable 'https://www.webpackjs.com/api/plugins/#tapable')。
+如果你和呆呆一样，开始看的官方文档是 [《编写一个插件》](https://link.juejin.cn/?target=https%3A%2F%2Fwww.webpackjs.com%2Fcontribute%2Fwriting-a-plugin%2F 'https://www.webpackjs.com/contribute/writing-a-plugin/')这里的话，那么现在请让我们换个方向了戳这里了： [《Plugin API》](https://link.juejin.cn/?target=https%3A%2F%2Fwww.webpackjs.com%2Fapi%2Fplugins%2F%23tapable 'https://www.webpackjs.com/api/plugins/[[tapable]]')。
 
 但并不是说上面的文档就不能看了，我们依然还是可以通过阅读它来了解更多插件相关的知识。
 
@@ -343,7 +343,7 @@ module.exports = No1WebpackPlugin;
 
 ### 推荐使用 compiler.hooks
 
-既然官方都推荐我们用`compiler.hooks`了，那我们就遵循呗。不过如果你直接去看[Plugin API](https://link.juejin.cn/?target=https%3A%2F%2Fwww.webpackjs.com%2Fapi%2Fplugins%2F%23tapable 'https://www.webpackjs.com/api/plugins/#tapable')的话对新手来说好像又有点绕，里面的`Tapable`、`compiler`、`compile`、`compilation`它们直接到底是存在怎样的关系呢？
+既然官方都推荐我们用`compiler.hooks`了，那我们就遵循呗。不过如果你直接去看[Plugin API](https://link.juejin.cn/?target=https%3A%2F%2Fwww.webpackjs.com%2Fapi%2Fplugins%2F%23tapable 'https://www.webpackjs.com/api/plugins/[[tapable]]')的话对新手来说好像又有点绕，里面的`Tapable`、`compiler`、`compile`、`compilation`它们直接到底是存在怎样的关系呢？
 
 没关系，呆呆都会依次的进行讲解。
 
@@ -470,7 +470,7 @@ compiler.plugin('done', () => {
 - `tapAsync`：回调方式注册异步钩子
 - `tapPromise`：`Promise`方式注册异步钩子
 
-OK👌，听了霖呆呆这段解释之后，我相信你起码能看得懂[官方文档-compiler 钩子](https://link.juejin.cn/?target=https%3A%2F%2Fwww.webpackjs.com%2Fapi%2Fcompiler-hooks%2F%23hooks 'https://www.webpackjs.com/api/compiler-hooks/#hooks')这里面的钩子是怎样用的了：
+OK👌，听了霖呆呆这段解释之后，我相信你起码能看得懂[官方文档-compiler 钩子](https://link.juejin.cn/?target=https%3A%2F%2Fwww.webpackjs.com%2Fapi%2Fcompiler-hooks%2F%23hooks 'https://www.webpackjs.com/api/compiler-hooks/[[hooks]]')这里面的钩子是怎样用的了：
 
 ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/5/18/172238af4f61b6a7~tplv-t2oaga2asx-watermark.awebp)
 
@@ -767,7 +767,7 @@ module.exports = {
 复制代码
 ```
 
-第二点，因为是在打包完成之前，所以我们可以去[compiler 钩子](https://link.juejin.cn/?target=https%3A%2F%2Fwww.webpackjs.com%2Fapi%2Fcompiler-hooks%2F%23emit 'https://www.webpackjs.com/api/compiler-hooks/#emit')来查查有没有什么可以用的。
+第二点，因为是在打包完成之前，所以我们可以去[compiler 钩子](https://link.juejin.cn/?target=https%3A%2F%2Fwww.webpackjs.com%2Fapi%2Fcompiler-hooks%2F%23emit 'https://www.webpackjs.com/api/compiler-hooks/[[emit]]')来查查有没有什么可以用的。
 
 咦～这个叫做`emit`的好像挺符合的：
 
